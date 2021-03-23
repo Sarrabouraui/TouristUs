@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TouristUs"
+    }
+  },
+  "defaultProject": "TouristUs",
+  "cli": {
+    "analytics": "068cbbe6-1d16-4297-9f4f-ae6d7d37e5de"
+  }
 }
