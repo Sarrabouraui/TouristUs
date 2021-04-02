@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HotelService} from '../services/hotel.service';
+import {Hotel} from '../model/hotel';
+import {observable} from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  // tslint:disable-next-line:ban-types
+  listHotel: Object;
+  constructor(private hotelService: HotelService) { }
 
   ngOnInit(): void {
+    this.hotelService.getHotel().subscribe(
+      (data) => this.listHotel = data);
   }
 
 }

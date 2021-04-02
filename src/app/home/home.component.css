@@ -1,0 +1,38 @@
+.card-deck {
+  display: block;
+  width: 100%;
+}
+.card {
+
+  float: left;
+  margin: 10px;
+  padding: 10px 3px;
+  /*setting width for each and every card element as well as -10px for removing the margin width for 5 elements*/
+  /*width: calc( 100% / 5 - 10px);*/
+}
+/*first element*/
+
+.card-deck .card:first-child {
+  margin-left: 0;
+}
+
+
+/*last element of the first row*/
+
+.card-deck .card:nth-child(5n) {
+  margin-right: 0;
+}
+
+
+/*first-element of the 2nd row*/
+
+.card-deck .card:nth-child(5n+1) {
+  margin-left: 0;
+}
+
+
+/*last element*/
+
+.container .card:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,27 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "title": "hotel1",
+      "desc": "hotelll",
+      "nbetoile": 3,
+      "nblike": 0,
+      "photo": "../../assets/h1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "hotel2",
+      "desc": "hotelll2222222",
+      "nbetoile": 3,
+      "nblike": 0,
+      "photo": "../../assets/four-seasons-hotel-tunis.jpg"
+    },
+    {
+      "id": 3,
+      "title": "dffb",
+      "nbetoile": "2",
+      "desc": "fhg",
+      "photo": "../../assets/Hasdrubal-Thalassa-Spa-Yasmine-Hammamet1-1024x500.jpg"
+    }
+  ]
+}

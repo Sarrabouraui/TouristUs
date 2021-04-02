@@ -1,31 +1,39 @@
-<form  #myform="ngForm">
+<div class="card" style="width: 25rem; position: center">
+  <div class="card-body">
 
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Hotel</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nom" name="nom" ngModel>
+      <form  #myform="ngForm">
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">ID</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="id" name="id" [(ngModel)]="hotel.id" required="">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Hotel</label>
+          <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="nom" name="nom" [(ngModel)]="hotel.title" required="">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Etoile</label>
+          <select class="form-control" id="exampleFormControlSelect1" name="nbetoile" [(ngModel)]="hotel.nbetoile" required>
+            <option *ngFor="let e of et">{{e}}</option>
+
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Description</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desc" [(ngModel)]="hotel.desc" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Image</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo" [(ngModel)]="hotel.photo" >
+        </div>
+
+        <button [disabled]="myform.invalid" type="submit" class="btn btn-primary" (click)="add()">Submit</button>
+
+      </form>
   </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Etoile</label>
-    <select class="form-control" id="exampleFormControlSelect1" name="nbetoile" ngModel>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desc" ngModel></textarea>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Image</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo" ngModel>
-  </div>
-
-  <button type="submit" class="btn btn-primary" (click)="showmyform(myform)">Submit</button>
-
-</form>
+</div>
+<router-outlet></router-outlet>

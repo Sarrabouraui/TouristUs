@@ -1,0 +1,22 @@
+blinker {
+  /*font-family: Pacifico,sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  -webkit-animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;*/
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: #000;    }
+  49%{    color: #000; }
+  60%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: #000;    }
+}
+.navbar{
+  margin-bottom: 30px;
+}
+#search{
+  position: absolute;
+  right: 0px;
+}
