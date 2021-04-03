@@ -32,7 +32,7 @@
 
   <tbody>
 
-  <tr *ngFor="let h of listHotel">
+  <tr *ngFor="let h of listHotel | paginate: config">
     <td>{{h.id}}</td>
     <td>{{h.title}}</td>
     <td>{{h.desc}}</td>
@@ -44,6 +44,7 @@
   </tbody>
 
 </table>
+  <pagination-controls (pageChange)="pageChanged($event)" [maxSize]="maxSize"></pagination-controls>
 <!--  <pagination-controls (pageChange)="currentPg = $event"></pagination-controls>  | paginate:{itemsPerPage: 4, currentPage: currentPg} -->
 </div>
 
@@ -73,7 +74,7 @@
 
           <div class="form-group">
             <label for="exampleFormControlSelect1">Etoile</label>
-            <select class="form-control" id="exampleFormControlSelect1" name="nbetoile" [(ngModel)]="hotelObj.nbetoile" required>
+            <select class="form-control" id="exampleFormControlSelect1" name="nbetoile" type="number" [(ngModel)]="hotelObj.nbetoile" required>
               <option *ngFor="let e of et">{{e}}</option>
 
             </select>

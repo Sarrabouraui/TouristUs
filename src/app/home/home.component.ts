@@ -9,9 +9,9 @@ import {observable} from 'rxjs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   // tslint:disable-next-line:ban-types
   listHotel: Object;
+  nblikes: number;
   constructor(private hotelService: HotelService) { }
 
   ngOnInit(): void {
@@ -19,4 +19,9 @@ export class HomeComponent implements OnInit {
       (data) => this.listHotel = data);
   }
 
+  likeClick(hotel){
+
+    hotel.nblike++;
+    this.hotelService.updateNblike(hotel);
+  }
 }

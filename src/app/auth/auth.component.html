@@ -1,3 +1,5 @@
+<div [ngStyle]="{'background-image': 'url(../../assets/bg.jpg)'}">
+<div class="card">
 <form #myform="ngForm" (ngSubmit)="logIn(myform)">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -16,4 +18,5 @@
 
   <button [disabled]="myform.invalid"  type="submit" class="btn btn-primary" >Connect</button>
 </form>
-
+</div>
+</div>

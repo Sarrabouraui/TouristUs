@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
   <div classe="card-deck" *ngFor="let h of listHotel">
 
@@ -6,11 +7,14 @@
                   <div class="card-body">
                     <h5 class="card-title">{{h.title}}</h5>
                     <p class="card-text">{{h.desc}}</p>
+                    <div >
+                      <p class="card-text">
+                        <img class="image" src="../../assets/e.png"></p></div>
+                    <!--<i class="fas fa-star"></i>-->
+                      <button class="btn btn-block btn-primary" (click)="likeClick(h)"><i class="fa fa-thumbs-up">{{h.nblike}} Like</i> </button>
 
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                   </div>
                 </div>
-
 
     </div>
 

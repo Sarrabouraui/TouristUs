@@ -15,6 +15,7 @@ import {NgbActiveModal, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { Notfound404Component } from './notfound404/notfound404.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -31,5 +31,8 @@ export class HotelService {
     return this.http.put('http://localhost:3000/hotels/', hotel.id, hotel);
   }
 
+  updateNblike(hotel) {
+    return this.http.put('http://localhost:3000/hotels/', hotel.id, hotel);
+  }
 
 }

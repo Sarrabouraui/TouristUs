@@ -23,8 +23,26 @@ export class BOComponent implements OnInit {
     nbetoile: '',
     nblike: ''
   };
+  config: any;
+  collection = { count: 20, data: [] };
+  maxSize: any;
   constructor(private hotelService: HotelService,
               private modalService: NgbModal) {
+    for (var i = 0; i < this.collection.count; i++) {
+      this.collection.data.push(
+        {
+          id: i + 1,
+          value: 'items number ' + (i + 1)
+        }
+      );
+    }
+
+    this.config = {
+      itemsPerPage: 3,
+      currentPage: 1,
+      totalItems: this.collection.count
+    };
+    this.maxSize = 4;
   }
 
   ngOnInit(): void {
@@ -34,6 +52,9 @@ export class BOComponent implements OnInit {
       (data) => this.getLatestHotel());
   }
 
+  pageChanged(event){
+    this.config.currentPage = event;
+  }
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
